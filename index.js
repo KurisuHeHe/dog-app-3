@@ -15,9 +15,7 @@ function getDogPicture() {
 
 function displayResults(responseJson) {
   const imageUrls = responseJson.message;
-  $(".images-container").replaceWith(
-    `<img src="${imageUrls}" class="results-img">`
-  );
+  $(".results-img").replaceWith(`<img src="${imageUrls}" class="results-img">`);
   $(".results").removeClass("hidden");
 }
 
@@ -29,6 +27,6 @@ function handleForm() {
 }
 
 $(function() {
-  console.log("Lets go!");
+  console.log("App Loaded");
   handleForm();
 });
